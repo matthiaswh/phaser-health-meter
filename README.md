@@ -4,11 +4,11 @@ Phaser Health Meter is a Phaser plugin that lets you easily insert health meters
 
 ## Getting started
 
-1. Include healthMeter.js
+### 1. Include healthMeter.js
 
 Copy healthMeter.js into your project's plugin directory. Load the script after you load phaser.js.
 
-2. Load & setupthe plugin
+### 2. Load & setup the plugin
 
 In your state (or in your game if you aren't using states) have Phaser load the plugin. Then set up the plugin type you want to display along with setup parameters. More details on the available options are below. 
 
@@ -28,7 +28,7 @@ create: function() {
 }
 ```
 
-3. Call the health meter's update method.
+### 3. Call the health meter's update method.
 
 In your update loop, simply call update on the health meter.
 
@@ -47,7 +47,7 @@ There are currently three types of health meters: text, bar, and icon.
 
 The text health meter shows the player's health and max health in plain text.
 
-![Example of a Phaser health meter in text mode](assets/images/healthMeterTextExample.png)
+![Example of a Phaser health meter in text mode](examples/assets/images/healthMeterTextExample.png)
 
 Available options:
 
@@ -58,7 +58,7 @@ Available options:
 
 The bar health meter shows the player's health as a two layer bar, with the max health displayed behind the current health. Think Mortal Kombat.
 
-![Example of a Phaser health meter in bar mode](assets/images/healthMeterBarExample.png)
+![Example of a Phaser health meter in bar mode](examples/assets/images/healthMeterBarExample.png)
 
 Available options:
 
@@ -73,7 +73,7 @@ The icon health meter shows the player's health as a series of icons. Think Zeld
 
 When using this mode, your sprite's maxHealth should be set at the max it will ever be during this game or stage. If you change its maxHealth parameter mid-game you must reinitialize the health meter.
 
-![Example of a Phaser health meter in icon mode](assets/images/healthMeterIconExample.png)
+![Example of a Phaser health meter in icon mode](examples/assets/images/healthMeterIconExample.png)
 
 Available options:
 
@@ -82,5 +82,6 @@ Available options:
 - width: the width of a single icon
 - height: the height of a single icon
 - rows: the number of rows in which the icon will be displayed
+- icon: the Phaser name of the image you want to use as your icon (this should be setup in your preloader)
 
 Icons are displayed from the top left to the bottom right. They are removed from the bottom right to the top left. The max health should be divisible by the number of rows.
