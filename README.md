@@ -47,7 +47,7 @@ There are currently three types of health meters: text, bar, and icon.
 
 The text health meter shows the player's health and max health in plain text.
 
-![Example of a Phaser health meter in text mode](examples/assets/images/healthMeterTextExample.png)
+![Example of a Phaser health meter in text mode](examples/assets/images/healthMeterTextExample.PNG)
 
 Available options:
 
@@ -58,7 +58,7 @@ Available options:
 
 The bar health meter shows the player's health as a two layer bar, with the max health displayed behind the current health. Think Mortal Kombat.
 
-![Example of a Phaser health meter in bar mode](examples/assets/images/healthMeterBarExample.png)
+![Example of a Phaser health meter in bar mode](examples/assets/images/healthMeterBarExample.PNG)
 
 Available options:
 
@@ -73,7 +73,7 @@ The icon health meter shows the player's health as a series of icons. Think Zeld
 
 When using this mode, your sprite's maxHealth should be set at the max it will ever be during this game or stage. If you change its maxHealth parameter mid-game you must reinitialize the health meter.
 
-![Example of a Phaser health meter in icon mode](examples/assets/images/healthMeterIconExample.png)
+![Example of a Phaser health meter in icon mode](examples/assets/images/healthMeterIconExample.PNG)
 
 Available options:
 
