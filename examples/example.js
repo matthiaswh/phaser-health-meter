@@ -78,7 +78,7 @@ window.onload = function() {
 
             // finally, setup our health indicator
             this.healthMeterText = this.game.add.plugin(Phaser.Plugin.HealthMeter);
-            this.healthMeterText.text(this.player, {x: 400, y: 20});
+            this.healthMeterText.text(this.player, {x: 400, y: 20, font: {font: "22px arial", fill: "#ff0000" }});
 
             this.healthMeterIcons = this.game.add.plugin(Phaser.Plugin.HealthMeter);
             this.healthMeterIcons.icons(this.player, {icon: 'heartFull', y: 20, x: 250, width: 16, height: 16, rows: 2});

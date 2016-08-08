@@ -31,6 +31,10 @@ Phaser.Plugin.HealthMeter = function(game, parent) {
     this.options.width = 32;
     this.options.height = 32;
     this.options.rows = 1;
+    this.options.font = {
+            font: "20px monospace",
+            fill: "#fff"
+        };
 };
 
 Phaser.Plugin.HealthMeter.prototype = Object.create(Phaser.Plugin.prototype);
@@ -107,10 +111,7 @@ Phaser.Plugin.HealthMeter.prototype.update = function() {
 Phaser.Plugin.HealthMeter.prototype.updateText = function() {
 
     if (!this.healthText) {
-        this.healthText = this.game.add.text(this.options.x, this.options.y, this.healthPrint(), {
-            font: "20px monospace",
-            fill: "#fff"
-        });
+        this.healthText = this.game.add.text(this.options.x, this.options.y, this.healthPrint(), this.options.font);
         this.healthText.fixedToCamera = true;
     }
 
