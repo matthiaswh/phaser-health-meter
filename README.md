@@ -22,7 +22,7 @@ parameters. More details on the available options are below.
 
 Don't forget to set your player's starting health and maxHealth.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ javascript
+```javascript
 create: function() {
     ...
     this.player.health = 50;
@@ -34,18 +34,18 @@ create: function() {
         {x: 20, y: 100, width: 100, height: 20}
     );
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### 3. Call the health meter's update method.
 
 In your update loop, simply call update on the health meter.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ javascript
+```javascript
 update: function() {
     ...
     this.playerHealthMeter.update();
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Configuration options
 ---------------------
