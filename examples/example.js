@@ -100,11 +100,6 @@ window.onload = function() {
 
             this.player.body.velocity.x = 0;
 
-            // update our health indicator
-            this.healthMeterText.update();
-            this.healthMeterIcons.update();
-            this.healthMeterBar.update();
-
             // handle movement input
             if (this.cursors.right.isDown) {
                 this.player.body.velocity.x = 200;

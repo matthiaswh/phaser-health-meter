@@ -36,17 +36,6 @@ create: function() {
 }
 ```
 
-### 3. Call the health meter's update method.
-
-In your update loop, simply call update on the health meter.
-
-```javascript
-update: function() {
-    ...
-    this.playerHealthMeter.update();
-}
-```
-
 Configuration options
 ---------------------
 
