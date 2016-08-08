@@ -35,6 +35,10 @@ Phaser.Plugin.HealthMeter = function(game, parent) {
             font: "20px monospace",
             fill: "#fff"
         };
+
+    this.options.foreground = '#00ff00';
+    this.options.background = '#333333';
+    this.options.alpha = 0.4;
 };
 
 Phaser.Plugin.HealthMeter.prototype = Object.create(Phaser.Plugin.prototype);
@@ -126,17 +130,17 @@ Phaser.Plugin.HealthMeter.prototype.updateBar = function() {
         var bmd = this.game.add.bitmapData(this.options.width, this.options.height);
         bmd.ctx.beginPath();
         bmd.ctx.rect(0, 0, this.options.width, this.options.height);
-        bmd.ctx.fillStyle = '#333333';
+        bmd.ctx.fillStyle = this.options.background;
         bmd.ctx.fill();
 
         var backBar = this.game.add.sprite(this.options.x, this.options.y, bmd);
-        backBar.alpha = 0.4;
+        backBar.alpha = this.options.alpha;
         backBar.fixedToCamera = true;
 
         bmd = this.game.add.bitmapData(this.options.width, this.options.height);
         bmd.ctx.beginPath();
         bmd.ctx.rect(0, 0, this.options.width, this.options.height);
-        bmd.ctx.fillStyle = '#00ff00';
+        bmd.ctx.fillStyle = this.options.foreground;;
         bmd.ctx.fill();
         this.healthBar = this.game.add.sprite(this.options.x, this.options.y, bmd);
         this.healthBar.width = (this.char.health / this.char.maxHealth) * this.options.width;

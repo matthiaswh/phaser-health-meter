@@ -84,7 +84,13 @@ window.onload = function() {
             this.healthMeterIcons.icons(this.player, {icon: 'heartFull', y: 20, x: 250, width: 16, height: 16, rows: 2});
 
             this.healthMeterBar = this.game.add.plugin(Phaser.Plugin.HealthMeter);
-            this.healthMeterBar.bar(this.player, {y: 20, x: 100, width: 100, height: 20});
+            this.healthMeterBar.bar(this.player, {
+                y: 20, x: 100,
+                width: 100, height: 20,
+                foreground: '#ff0000',
+                background: '#aa0000',
+                alpha: 0.6
+            });
         },
 
         update: function() {
